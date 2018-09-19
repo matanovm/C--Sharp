@@ -1,0 +1,7 @@
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\bin\Debug\C Sharp Advanced Exercises.exe.config
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\bin\Debug\C Sharp Advanced Exercises.exe
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\bin\Debug\C Sharp Advanced Exercises.pdb
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\obj\Debug\C Sharp Advanced Exercises.csprojAssemblyReference.cache
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\obj\Debug\C Sharp Advanced Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\obj\Debug\C Sharp Advanced Exercises.exe
+C:\Users\Martin Matanov\source\repos\C Sharp Advanced Exercises\C Sharp Advanced Exercises\obj\Debug\C Sharp Advanced Exercises.pdb
