@@ -1,87 +1,65 @@
-﻿namespace _1.Matrix_of_Palindromes
+﻿using System;
+
+using System.Linq;
+
+
+
+namespace _01.Matrix_of_Palindromes
 
 {
 
-    using System;
-    using System.Linq;
-    using System.Text;
-
-
-    public class MatrixOfPalindromes
+    class Program
 
     {
-        public static void Main()
+
+        static void Main(string[] args)
 
         {
-            Console.WriteLine(BuildMatrix());
-        }
 
+            var rowsAndColumns = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        private static string BuildMatrix()
+            char[,] matrix = new char[rowsAndColumns[0], rowsAndColumns[1]];
 
-        {
-            
-            var dimensions = ParseInput();
+            char a = 'a';
 
-            if (dimensions == null)
+            char b = 'a';
 
-            {
-                return string.Empty;
-            }
-
-
-            var sb = new StringBuilder();
-
-
-            for (int i = 0; i < dimensions[0]; i++)
+            for (int rows = 0; rows < rowsAndColumns[0]; rows++)
 
             {
 
-                for (int j = 0; j < dimensions[1]; j++)
+                for (int cols = 0; cols < rowsAndColumns[1]; cols++)
 
                 {
 
-                    var borderChar = (char)('a' + i);
-                    var middleChar = (char)(borderChar + j);
-                    sb.Append($"{borderChar}{middleChar}{borderChar} ");
+                    Console.Write(a);
+
+                    Console.Write(b);
+
+                    Console.Write(a);
+
+                    Console.Write(" ");
+
+                    b++;
 
                 }
 
 
-                if (i != dimensions[0] - 1)
 
-                {
-                    sb.Append(Environment.NewLine);
-                }
+                Console.WriteLine();
+
+                a++;
+
+                b = a;
 
             }
-
-            return sb.ToString();
-
-        }
-
-
-        private static int[] ParseInput()
-
-        {
-            int[] result = null;
-
-            try
-
-            {
-                result = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            }
-
-            catch (FormatException e)
-
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            return result;
 
         }
 
     }
 
 }
+
+
+
+
