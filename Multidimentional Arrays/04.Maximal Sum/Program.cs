@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _03._2x2_Squares_in_Matrix
+namespace _04.Maximal_Sum
 {
     class Program
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Diagonal_Differecnce
+namespace _02.Diagonal_Differecnce
 {
     class Program
     {
