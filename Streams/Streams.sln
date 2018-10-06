@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Odd numbers", "01. Odd numbers\01. Odd numbers.csproj", "{408AD554-60E8-4EE2-9DDD-C3D2B8BA949B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Odd lines", "01. Odd numbers\01. Odd lines.csproj", "{408AD554-60E8-4EE2-9DDD-C3D2B8BA949B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Line Numbers", "02. Line Numbers\02. Line Numbers.csproj", "{143D3749-4061-449F-8235-FFDCEDEE64B5}"
 EndProject
