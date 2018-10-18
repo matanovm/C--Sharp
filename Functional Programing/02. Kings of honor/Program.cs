@@ -1,15 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _02.Knights_of_honor
+
+namespace _01.Action_Point
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Action<string> print = message => Console.WriteLine($"Sir {message}");
+            var input = Console.ReadLine()
+                .Split(new char [] {' '}, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
+
+            foreach (var word in input)
+            {
+                print(word);
+            }
         }
     }
 }

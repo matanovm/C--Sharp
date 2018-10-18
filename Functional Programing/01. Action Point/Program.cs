@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace _01.Action_Point
 {
@@ -10,6 +8,15 @@ namespace _01.Action_Point
     {
         static void Main(string[] args)
         {
+            Action<string> print = message => Console.WriteLine(message);
+            var input = Console.ReadLine()
+                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
+
+            foreach (var word in input)
+            {
+                print(word);
+            }
         }
     }
 }
