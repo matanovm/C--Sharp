@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _06.Reverse_and_Exclude
 {
@@ -10,6 +7,17 @@ namespace _06.Reverse_and_Exclude
     {
         static void Main(string[] args)
         {
-        }
+            int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            int n = int.Parse(Console.ReadLine());
+            Func<int, int, int> isDivisible = (int x, int b) => x % n;
+
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                if (isDivisible(input[i], n) != 0)
+                {
+                    Console.Write(input[i] + " ");
+                }
+            }
+            }
     }
 }
