@@ -9,7 +9,6 @@ namespace _09._Crossfire
         static void Main()
         {
 
-
             int[] sizes = Console.ReadLine()
                 .Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
