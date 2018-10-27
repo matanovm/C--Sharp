@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _13.TriFunction
 {
@@ -10,6 +8,12 @@ namespace _13.TriFunction
     {
         static void Main(string[] args)
         {
+            int sumInput = int.Parse(Console.ReadLine());
+            List<string> names = Console.ReadLine().Split(' ').ToList();
+            Func<string, int, bool> filter = (name, sum) => name.ToCharArray().Sum(c => c) >= sum;
+
+            Console.WriteLine(names.FirstOrDefault(name => filter(name, sumInput)));
         }
     }
+    
 }

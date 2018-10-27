@@ -18,6 +18,6 @@ namespace _06.Reverse_and_Exclude
                     Console.Write(input[i] + " ");
                 }
             }
-            }
+        }
     }
 }
