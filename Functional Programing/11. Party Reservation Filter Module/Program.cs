@@ -4,54 +4,54 @@ using System.Linq;
 
 namespace _11.Party_Reservation_Filter_Module
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string[] people = Console.ReadLine().Split();
-            Dictionary<string, Predicate<string>> filters = new Dictionary<string, Predicate<string>>();
-            string input;
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			string[] people = Console.ReadLine().Split();
+			Dictionary<string, Predicate<string>> filters = new Dictionary<string, Predicate<string>>();
+			string input;
 
-            while ((input = Console.ReadLine()) != "Print")
-            {
-                var split = input.Split(';');
-                string funcName = split[0];
-                string filterName = split[1];
-                string argument = split[2];
-                string filterKey = $"{filterName};{argument}";
+			while ((input = Console.ReadLine()) != "Print")
+			{
+				var split = input.Split(';');
+				string funcName = split[0];
+				string filterName = split[1];
+				string argument = split[2];
+				string filterKey = $"{filterName};{argument}";
 
-                if (funcName == "Remove filter")
-                {
-                    filters.Remove(filterKey);
-                }
-                else if (funcName == "Add filter")
-                {
-                    Predicate<string> filter = null;
+				if (funcName == "Remove filter")
+				{
+					filters.Remove(filterKey);
+				}
+				else if (funcName == "Add filter")
+				{
+					Predicate<string> filter = null;
 
-                    if (filterName == "Starts with")
-                    {
-                        filter = name => name.StartsWith(argument);
-                    }
-                    else if (filterName == "Ends with")
-                    {
-                        filter = name => name.EndsWith(argument);
-                    }
-                    else if (filterName == "Length")
-                    {
-                        filter = name => name.Length == int.Parse(argument);
-                    }
-                    else if (filterName == "Contains")
-                    {
-                        filter = name => name.Contains(argument);
-                    }
+					if (filterName == "Starts with")
+					{
+						filter = name => name.StartsWith(argument);
+					}
+					else if (filterName == "Ends with")
+					{
+						filter = name => name.EndsWith(argument);
+					}
+					else if (filterName == "Length")
+					{
+						filter = name => name.Length == int.Parse(argument);
+					}
+					else if (filterName == "Contains")
+					{
+						filter = name => name.Contains(argument);
+					}
 
-                    filters.Add(filterKey, filter);
-                }
-            }
+					filters.Add(filterKey, filter);
+				}
+			}
 
-            people = people.Where(person => !filters.Values.Any(filter => filter(person))).ToArray();
-            Console.WriteLine(string.Join(" ", people));
-        }
-    }
-    
+			people = people.Where(person => !filters.Values.Any(filter => filter(person))).ToArray();
+			Console.WriteLine(string.Join(" ", people));
+		}
+	}
+
 }

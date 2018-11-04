@@ -2,47 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var input = Console.ReadLine()
-            .Split()
-            .Select(int.Parse)
-            .ToArray();
+class Program
+{
+	static void Main(string[] args)
+	{
+		var input = Console.ReadLine()
+		.Split()
+		.Select(int.Parse)
+		.ToArray();
 
-            int enqueueCount = input[0];
-            int dequeueCount = input[1];
-            int item = input[2];
+		int enqueueCount = input[0];
+		int dequeueCount = input[1];
+		int item = input[2];
 
-            var array = Console.ReadLine()
-            .Split()
-            .Select(int.Parse)
-            .ToArray();
-            var queue = new Queue<int>(array);
+		var array = Console.ReadLine()
+		.Split()
+		.Select(int.Parse)
+		.ToArray();
+		var queue = new Queue<int>(array);
 
-            for (int i = 0; i < dequeueCount; i++)
-            {
-                queue.Dequeue();
-            }
+		for (int i = 0; i < dequeueCount; i++)
+		{
+			queue.Dequeue();
+		}
 
-            if (queue.Contains(item))
-            {
-                Console.WriteLine("true");
-            }
+		if (queue.Contains(item))
+		{
+			Console.WriteLine("true");
+		}
 
-            else
-            {
-                if (queue.Count > 0)
-                {
-                    Console.WriteLine(queue.Min());
-                }
+		else
+		{
+			if (queue.Count > 0)
+			{
+				Console.WriteLine(queue.Min());
+			}
 
-                else
-                {
-                    Console.WriteLine(0);
-                }
-            }
-        }
-    }
+			else
+			{
+				Console.WriteLine(0);
+			}
+		}
+	}
+}
 
