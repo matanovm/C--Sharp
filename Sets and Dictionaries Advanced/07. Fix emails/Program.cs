@@ -12,8 +12,8 @@ namespace _07.Fix_emails
 			while (name != "stop")
 			{
 				string email = Console.ReadLine();
-				string ending = email.Substring(email.Length - 2, 2).ToLower();
-				if (ending != "uk" && ending != "us")
+				string ends = email.Substring(email.Length - 2, 2).ToLower();
+				if (ends != "uk" && ends != "us")
 				{
 					emails.Add(name, email);
 				}
